@@ -74,6 +74,31 @@
      background-color: #d4af70;
     }
   </style>
+  <script>
+ 
+    // Extract query parameter by name
+ 
+    function getQueryParam(name) {
+ 
+      const urlParams = new URLSearchParams(window.location.search);
+ 
+      return urlParams.get(name);
+ 
+    }
+    // Fill Booking Number field if URL param exists
+ 
+    document.addEventListener('DOMContentLoaded', () => {
+ 
+      const bookingId = getQueryParam('name');
+ 
+      if (bookingId) {
+ 
+        document.getElementById('00NgK000012FaeD').value = bookingId;
+ 
+      }
+ 
+    });
+</script>
 </head>
 <body>
 
